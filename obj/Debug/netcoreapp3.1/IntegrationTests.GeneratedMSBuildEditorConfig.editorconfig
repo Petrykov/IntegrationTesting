@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = IntegrationTests
+build_property.ProjectDir = /Users/mac/Projects/backend_dockerAPI/IntegrationTests/
