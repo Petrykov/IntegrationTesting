@@ -266,7 +266,6 @@
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Text.Encoding.dll
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Text.Encoding.Extensions.dll
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Text.Encodings.Web.dll
-/Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Text.Json.dll
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Text.RegularExpressions.dll
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Threading.Channels.dll
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/refs/System.Threading.dll
@@ -443,3 +442,4 @@
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/obj/Debug/net5.0/ref/IntegrationTests.dll
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/obj/Debug/net5.0/IntegrationTests.pdb
 /Users/mac/Projects/backend_dockerAPI/IntegrationTests/obj/Debug/net5.0/IntegrationTests.genruntimeconfig.cache
+/Users/mac/Projects/backend_dockerAPI/IntegrationTests/bin/Debug/net5.0/System.Text.Json.dll
