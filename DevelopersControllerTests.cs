@@ -16,7 +16,7 @@ namespace backendIntegrationTests
         public async Task Get_All_Developers()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             // Act
             var response = await TestClient.GetAsync("/api/developers");
@@ -29,10 +29,10 @@ namespace backendIntegrationTests
         public async Task Get_Developer_By_Id()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             // Act
-            var response = await TestClient.GetAsync("/api/developers/615b0a9b7f4732e8736a1f94");
+            var response = await TestClient.GetAsync("/api/developers/6175b3f03e043daa9b7d6113");
 
             // Assert
             Developer developer = await response.Content.ReadAsAsync<Developer>();
@@ -44,7 +44,7 @@ namespace backendIntegrationTests
         public async Task Create_New_Developer()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             var myContent = JsonConvert.SerializeObject(new Developer("testEmail", "testPassword", "testName", "testImgSource", new string[] { "1", "2", "3" }, "testPhoneNumber", "testCity", "testDescription"));
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);

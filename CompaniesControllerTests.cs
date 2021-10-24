@@ -16,7 +16,7 @@ namespace backendIntegrationTests
         public async Task Get_All_Companies()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             // Act
             var response = await TestClient.GetAsync("/api/companies");
@@ -29,10 +29,10 @@ namespace backendIntegrationTests
         public async Task Get_Company_By_Id()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             // Act
-            var response = await TestClient.GetAsync("/api/companies/615b0ab87f4732e8736a1f95");
+            var response = await TestClient.GetAsync("/api/companies/6175bfd83b4e3eda3b63851b");
 
             // Assert
             Company company = await response.Content.ReadAsAsync<Company>();
@@ -44,7 +44,7 @@ namespace backendIntegrationTests
         public async Task Create_New_Company()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             var myContent = JsonConvert.SerializeObject(new Company("testEmail", "testPassword", "testName", "testImgSource", new string[] { "1", "2", "3" }));
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -13,11 +13,13 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
     <PackageReference Include="FluentAssertions" Version="6.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <None Remove="FluentAssertions" />
     <None Remove="Microsoft.AspNetCore.Mvc.Testing" />
+    <None Remove="System.Text.Json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\backend_dockerAPI\backend_dockerAPI.csproj" />

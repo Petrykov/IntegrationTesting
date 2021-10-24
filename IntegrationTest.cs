@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using backend_dockerAPI;
@@ -14,16 +15,19 @@ namespace IntegrationTests
         {
             var appFactory = new WebApplicationFactory<Startup>();
             TestClient = appFactory.CreateClient();
+            TestClient.BaseAddress = new Uri("https://backend-server-heroku.herokuapp.com");
         }
 
-        protected async Task Authenticate()
+        protected async Task AuthenticateAsync()
         {
             TestClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", await GetJwtAsync());
         }
 
         private async Task<string> GetJwtAsync()
         {
-            var response = await TestClient.PostAsJsonAsync("/api/login", new { Email = "Alex", Password = "password" });
+            var user = new { Email = "Alex", Password = "password" };
+            TestClient.BaseAddress = new Uri("https://backend-server-heroku.herokuapp.com");
+            var response = await TestClient.PostAsJsonAsync("/api/login", user);
             var registrationResponse = await response.Content.ReadAsAsync<AuthenticationResult>();
             return registrationResponse.Token;
         }

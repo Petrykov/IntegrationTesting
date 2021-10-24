@@ -16,7 +16,7 @@ namespace backendIntegrationTests
         public async Task Get_All_Quizzes()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             // Act
             var response = await TestClient.GetAsync("/api/quizzes");
@@ -29,10 +29,10 @@ namespace backendIntegrationTests
         public async Task Get_Quiz_By_Id()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             // Act
-            var response = await TestClient.GetAsync("/api/quizzes/615d908975054a6d1c34db85");
+            var response = await TestClient.GetAsync("/api/quizzes/6175bf6c3d5a8f15f332fcfa");
 
             // Assert
             Quiz quiz = await response.Content.ReadAsAsync<Quiz>();
@@ -44,7 +44,7 @@ namespace backendIntegrationTests
         public async Task Create_New_Quiz()
         {
             // Arrange
-            await Authenticate();
+            await AuthenticateAsync();
 
             var myContent = JsonConvert.SerializeObject(new Quiz("615b0ab87f4732e8736a1f95", "testName", "testRequiredStack", 5, new string[] { "61643a9d371ce2924b289979", "61659ae0751e1515cc7114a9" }, 3));
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
