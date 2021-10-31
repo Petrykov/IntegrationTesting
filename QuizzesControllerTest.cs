@@ -32,7 +32,7 @@ namespace backendIntegrationTests
             await AuthenticateAsync();
 
             // Act
-            var response = await TestClient.GetAsync("/api/quizzes/6175bf6c3d5a8f15f332fcfa");
+            var response = await TestClient.GetAsync("/api/quizzes/617f250128318130e3e9f4e4");
 
             // Assert
             Quiz quiz = await response.Content.ReadAsAsync<Quiz>();

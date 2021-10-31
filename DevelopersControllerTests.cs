@@ -46,7 +46,7 @@ namespace backendIntegrationTests
             // Arrange
             await AuthenticateAsync();
 
-            var myContent = JsonConvert.SerializeObject(new Developer("testEmail", "testPassword", "testName", "testImgSource", new string[] { "1", "2", "3" }, "testPhoneNumber", "testCity", "testDescription"));
+            var myContent = JsonConvert.SerializeObject(new Developer("testEmail", "testPassword", "testName", "testImgSource", new string[] { "1", "2", "3" }, "testPhoneNumber", "testCity", "testDescription", "testOccupationField"));
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
             var byteContent = new ByteArrayContent(buffer);
             byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");

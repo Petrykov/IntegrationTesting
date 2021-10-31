@@ -17,7 +17,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/mac/.config/NuGet/NuGet.Config"
+          "/Users/mac/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -41,21 +41,25 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "AspNetCore.Mvc.HttpActionResults": {
+            "AWSSDK.Core": {
               "target": "Package",
-              "version": "[0.3.0, )"
+              "version": "[3.7.3.27, )"
             },
-            "EM.UsingSwagger": {
+            "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
-              "version": "[1.0.8, )"
+              "version": "[3.7.1, )"
             },
-            "JWT": {
+            "AWSSDK.S3": {
               "target": "Package",
-              "version": "[8.4.2, )"
+              "version": "[3.7.3.19, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.15, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -65,25 +69,9 @@
               "target": "Package",
               "version": "[2.13.2, )"
             },
-            "Swashbuckle": {
-              "target": "Package",
-              "version": "[5.6.0, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
-            },
-            "System.Configuration.ConfigurationManager": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[6.13.1, )"
-            },
-            "System.Net.Http": {
-              "target": "Package",
-              "version": "[4.3.4, )"
             }
           },
           "imports": [
@@ -121,7 +109,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/mac/.config/NuGet/NuGet.Config"
+          "/Users/mac/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -151,31 +139,39 @@
           "dependencies": {
             "FluentAssertions": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
             },
             "Microsoft.AspNetCore.Mvc.Testing": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[16.11.0, )"
             },
             "System.Text.Json": {
               "target": "Package",
               "version": "[5.0.2, )"
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[3.1.0, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.1, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [

@@ -15,7 +15,6 @@ namespace IntegrationTests
         {
             var appFactory = new WebApplicationFactory<Startup>();
             TestClient = appFactory.CreateClient();
-            TestClient.BaseAddress = new Uri("https://backend-server-heroku.herokuapp.com");
         }
 
         protected async Task AuthenticateAsync()
@@ -25,8 +24,8 @@ namespace IntegrationTests
 
         private async Task<string> GetJwtAsync()
         {
-            var user = new { Email = "Alex", Password = "password" };
             TestClient.BaseAddress = new Uri("https://backend-server-heroku.herokuapp.com");
+            var user = new { Email = "testingAccount", Password = "Vv11111" };
             var response = await TestClient.PostAsJsonAsync("/api/login", user);
             var registrationResponse = await response.Content.ReadAsAsync<AuthenticationResult>();
             return registrationResponse.Token;
